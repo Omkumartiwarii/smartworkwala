@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartWorkWala (smartworkwala.com) - Smart Solutions & Opportunity Aggregator</title>
+  <meta name="description" content="SmartWorkWala bridges the gap between your goals and verified experts, skills, digital tools & growth opportunities in one unified ecosystem.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#0D6EFD',       // Electric Blue from logo
+              blueLight: '#38BDF8',  // Cyan/Light Blue node
+              navy: '#0B1E48',       // Deep Navy from logo
+              navyDark: '#061026',   // Rich Dark Background
+              orange: '#FF7A00',     // Vibrant Orange swoosh
+              amber: '#FFB800',      // Golden Yellow
+              green: '#10B981',      // Growth Green
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+          },
+          boxShadow: {
+            'glow-blue': '0 0 35px -5px rgba(13, 110, 253, 0.35)',
+            'glow-orange': '0 0 35px -5px rgba(255, 122, 0, 0.35)',
+            'glass': '0 8px 32px 0 rgba(11, 30, 72, 0.08)',
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'spin-slow': 'spin 12s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Glass & Gradient Effects */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    .dark-glass-card {
+      background: rgba(11, 30, 72, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+    .gradient-text-blue {
+      background: linear-gradient(135deg, #0D6EFD 0%, #00C2FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gradient-text-orange {
+      background: linear-gradient(135deg, #FF7A00 0%, #FFB800 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .grid-bg-pattern {
+      background-image: radial-gradient(rgba(13, 110, 253, 0.12) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    /* Animated Gradient Border */
+    .gradient-border-wrapper {
+      position: relative;
+      border-radius: 1rem;
+      background: linear-gradient(135deg, #0D6EFD, #FF7A00, #38BDF8);
+      padding: 1.5px;
+    }
+    .gradient-border-content {
+      background: #ffffff;
+      border-radius: calc(1rem - 1.5px);
+    }
+    /* Smooth Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0D6EFD;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden">
+
+  <!-- TOP ANNOUNCEMENT BAR (Monetization / Sponsorship / High-Intent Hook) -->
+  <div class="bg-gradient-to-r from-brand-navyDark via-brand-navy to-brand-navyDark text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2 mx-auto sm:mx-0">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-brand-orange text-white uppercase tracking-wider">
+          New
+        </span>
+        <span class="font-medium text-slate-200">
+          🚀 India's Smartest Solution & Opportunity Aggregator is live!
+        </span>
+        <a href="#match-engine" class="hidden md:inline-flex items-center gap-1 font-semibold text-brand-amber hover:underline ml-1">
+          Take 60s Match Quiz <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+      <div class="hidden sm:flex items-center gap-4 text-xs text-slate-300">
+        <span class="flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full bg-brand-green animate-ping"></span>
+          <span>1,240+ Verified Solutions Available</span>
+        </span>
+        <span class="text-slate-500">|</span>
+        <a href="#for-sponsors" class="hover:text-brand-amber font-medium transition-colors">Advertise / Partner With Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="relative flex items-center">
+            <img src="assets/logo.png" alt="SmartWorkWala Logo" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+          </div>
+          <div class="hidden lg:block border-l border-slate-200 pl-3">
+            <span class="block text-xs uppercase tracking-widest font-extrabold text-brand-navy">Aggregator Hub</span>
+            <span class="block text-[11px] text-slate-500">Bridge to Growth</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
+          <a href="#verticals" class="hover:text-brand-blue transition-colors flex items-center gap-1">
+            Solutions Hub
+          </a>
+          <a href="#how-it-works" class="hover:text-brand-blue transition-colors">
+            How It Works
+          </a>
+          <a href="#match-engine" class="hover:text-brand-blue transition-colors flex items-center gap-1.5">
+            <span class="px-2 py-0.5 text-[11px] font-bold bg-blue-100 text-brand-blue rounded-full">Interactive</span>
+            Match Engine
+          </a>
+          <a href="#sponsorship-showcase" class="hover:text-brand-blue transition-colors">
+            Featured Deals
+          </a>
+          <a href="#for-sponsors" class="hover:text-brand-blue transition-colors">
+            For Partners
+          </a>
+        </nav>
+
+        <!-- Right Action CTAs -->
+        <div class="hidden sm:flex items-center gap-3">
+          <button onclick="openModal('advertise')" class="text-xs font-bold text-slate-600 hover:text-brand-navy px-3 py-2 rounded-lg hover:bg-slate-100 transition-all">
+            List Your Service
+          </button>
+          <a href="#match-engine" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-blue to-blue-600 hover:from-blue-600 hover:to-brand-navy text-white text-sm font-bold px-5 py-2.5 rounded-xl shadow-glow-blue transition-all duration-300 hover:scale-[1.02]">
+            <i data-lucide="sparkles" class="w-4 h-4 text-brand-amber"></i>
+            <span>Find My Solution</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex md:hidden items-center">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 hover:text-brand-navy hover:bg-slate-100 focus:outline-none" aria-label="Toggle menu">
+            <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3">
+      <a href="#verticals" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-blue">Solutions Hub</a>
+      <a href="#how-it-works" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-blue">How It Works</a>
+      <a href="#match-engine" class="block py-2 text-base font-semibold text-brand-blue flex items-center justify-between">
+        <span>Smart Match Engine</span>
+        <span class="text-xs bg-blue-100 px-2 py-0.5 rounded-full font-bold">Try Now</span>
+      </a>
+      <a href="#sponsorship-showcase" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-blue">Featured Deals & Ads</a>
+      <a href="#for-sponsors" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-blue">Partner / Advertise</a>
+      <div class="pt-4 border-t border-slate-100 flex flex-col gap-2">
+        <button onclick="openModal('solution')" class="w-full text-center bg-brand-blue text-white py-3 rounded-xl font-bold shadow-md">
+          Find My Solution Free
+        </button>
+        <button onclick="openModal('advertise')" class="w-full text-center bg-slate-100 text-slate-800 py-2.5 rounded-xl font-semibold text-sm">
+          List Service / Brand Sponsorship
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: THE AGGREGATOR BRIDGE -->
+  <section class="relative pt-12 pb-20 md:pt-16 md:pb-28 overflow-hidden bg-gradient-to-b from-blue-50/60 via-white to-slate-50 grid-bg-pattern">
+    
+    <!-- Ambient Glow Circles -->
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand-blue/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 -right-32 w-96 h-96 bg-brand-orange/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/80 border border-blue-200 text-brand-navy text-xs sm:text-sm font-semibold shadow-sm">
+            <span class="flex h-2 w-2 rounded-full bg-brand-orange animate-ping"></span>
+            <span>Digital Intermediate Bridge & Curated Aggregator</span>
+          </div>
+
+          <!-- Main Catchy Title -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display text-brand-navy tracking-tight leading-[1.15]">
+            Right Solution. Right People. <br>
+            <span class="gradient-text-blue">Smart Work.</span>
+            <span class="gradient-text-orange"> Real Growth.</span>
+          </h1>
+
+          <!-- Value Proposition Description -->
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            Bhatakna band karo! <strong class="text-brand-navy font-semibold">SmartWorkWala</strong> acts as your intelligent bridge — aggregating verified skill guidance, social media reach boosters, high-ROI freelance services, and curated digital tools matched to your exact requirement.
+          </p>
+
+          <!-- LIVE SEARCH BAR / AGGREGATOR ENGINE SEARCH -->
+          <div class="max-w-xl mx-auto lg:mx-0">
+            <div class="bg-white p-2 rounded-2xl shadow-xl border border-slate-200 flex flex-col sm:flex-row items-center gap-2">
+              <div class="flex items-center gap-2.5 px-3 flex-1 w-full text-slate-400">
+                <i data-lucide="search" class="w-5 h-5 text-brand-blue"></i>
+                <input 
+                  type="text" 
+                  id="hero-search-input"
+                  placeholder="E.g., Video Editor, Instagram Growth, Python Roadmap, AI SaaS..." 
+                  class="w-full text-sm text-slate-800 placeholder-slate-400 focus:outline-none font-medium py-1"
+                >
+              </div>
+              <button 
+                onclick="handleHeroSearch()" 
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brand-orange to-amber-500 hover:from-amber-500 hover:to-brand-orange text-white px-6 py-3 rounded-xl font-bold text-sm shadow-md transition-all duration-200">
+                <span>Explore Solutions</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+            <!-- Quick Pill Suggestions -->
+            <div class="mt-3 flex flex-wrap items-center justify-center lg:justify-start gap-2 text-xs">
+              <span class="text-slate-500 font-semibold">Trending Searches:</span>
+              <button onclick="fillSearch('Instagram Reel Growth')" class="px-2.5 py-1 rounded-lg bg-slate-200/70 hover:bg-brand-blue hover:text-white text-slate-700 transition-colors font-medium">📈 Insta Reach</button>
+              <button onclick="fillSearch('Full-Stack Web Dev Roadmap')" class="px-2.5 py-1 rounded-lg bg-slate-200/70 hover:bg-brand-blue hover:text-white text-slate-700 transition-colors font-medium">🎓 Coding Roadmap</button>
+              <button onclick="fillSearch('Verified Video Editor')" class="px-2.5 py-1 rounded-lg bg-slate-200/70 hover:bg-brand-blue hover:text-white text-slate-700 transition-colors font-medium">🎬 Video Editor</button>
+              <button onclick="fillSearch('AI Automation Tools')" class="px-2.5 py-1 rounded-lg bg-slate-200/70 hover:bg-brand-blue hover:text-white text-slate-700 transition-colors font-medium">⚡ AI Tools</button>
+            </div>
+          </div>
+
+          <!-- Trust & Social Proof Badges -->
+          <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 border-t border-slate-200/80">
+            <div class="flex items-center gap-2">
+              <div class="flex -space-x-2">
+                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="User 1">
+                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="User 2">
+                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="User 3">
+                <img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="User 4">
+              </div>
+              <div class="text-left text-xs">
+                <div class="flex text-amber-400">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                </div>
+                <span class="text-slate-600 font-semibold"><strong class="text-brand-navy">4.9/5</strong> from 38,000+ matches</span>
+              </div>
+            </div>
+
+            <div class="h-6 w-px bg-slate-300 hidden sm:block"></div>
+
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-600">
+              <span class="p-1 rounded-full bg-green-100 text-brand-green">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </span>
+              <span>100% Free For Requirement Seekers</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Interactive Diagram / Bridge Simulator Card -->
+        <div class="lg:col-span-5 relative">
+          
+          <div class="relative mx-auto max-w-md">
+            
+            <!-- Glowing background aura -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-brand-blue to-brand-orange rounded-3xl filter blur-2xl opacity-20 transform -rotate-3 scale-105"></div>
+
+            <!-- Main Interactive Aggregator Bridge Card -->
+            <div class="relative bg-white rounded-3xl p-6 shadow-2xl border border-slate-100 space-y-6">
+              
+              <!-- Card Header with Brand Indicator -->
+              <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-navy to-brand-blue flex items-center justify-center p-1.5 shadow-md">
+                    <img src="assets/logo.png" alt="Icon" class="w-full h-full object-contain filter brightness-0 invert">
+                  </div>
+                  <div>
+                    <h3 class="font-extrabold text-brand-navy text-sm font-display">The SWW Smart Bridge</h3>
+                    <p class="text-[11px] text-slate-500 font-medium">Intelligent Aggregation Flow</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 text-[11px] font-bold rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Live Engine
+                </span>
+              </div>
+
+              <!-- Flow Step 1: User Goal Input -->
+              <div class="bg-slate-50 rounded-2xl p-3.5 border border-slate-200/80 flex items-center gap-3 hover:border-brand-blue transition-colors">
+                <div class="w-9 h-9 rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center font-bold text-xs shrink-0">
+                  <i data-lucide="user-check" class="w-4 h-4"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex justify-between items-center text-[11px] text-slate-500">
+                    <span>STEP 1: YOUR REQUIREMENT</span>
+                    <span class="font-bold text-brand-blue">Active</span>
+                  </div>
+                  <p class="text-xs font-bold text-slate-800 truncate">"Mujhe digital marketing & viral video editing chahiye"</p>
+                </div>
+              </div>
+
+              <!-- Animated Connecting Bridge Beam -->
+              <div class="relative py-1 flex items-center justify-center">
+                <div class="w-0.5 h-6 bg-gradient-to-b from-brand-blue via-brand-orange to-brand-amber"></div>
+                <div class="absolute bg-white px-2 py-0.5 rounded-full border border-slate-200 shadow-xs text-[10px] font-bold text-slate-600 flex items-center gap-1">
+                  <i data-lucide="zap" class="w-3 h-3 text-brand-orange animate-bounce"></i>
+                  <span>SWW Aggregator Engine (Filters 99% Noise)</span>
+                </div>
+              </div>
+
+              <!-- Flow Step 2: Instant Verified Match Output -->
+              <div class="bg-gradient-to-br from-blue-50/80 to-amber-50/80 rounded-2xl p-4 border border-blue-200/80 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-extrabold uppercase tracking-wider text-brand-navy flex items-center gap-1">
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-green"></i>
+                    MATCH FOUND (Top 1% Curated)
+                  </span>
+                  <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-bold">
+                    Zero Spam
+                  </span>
+                </div>
+
+                <!-- Match Item 1 -->
+                <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-red-100 text-red-600 flex items-center justify-center font-bold text-xs">
+                      <i data-lucide="video" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-bold text-slate-800">Shorts & Reels Pro Editor</h4>
+                      <p class="text-[10px] text-slate-500">Verified Partner • 4.9★ (320+ projects)</p>
+                    </div>
+                  </div>
+                  <span class="text-[11px] font-bold text-brand-blue">Connect &rarr;</span>
+                </div>
+
+                <!-- Match Item 2 -->
+                <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">
+                      <i data-lucide="trending-up" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-xs font-bold text-slate-800">Organic Growth Blueprint</h4>
+                      <p class="text-[10px] text-slate-500">Curated Free Guide + Direct Support</p>
+                    </div>
+                  </div>
+                  <span class="text-[11px] font-bold text-brand-blue">Free Access &rarr;</span>
+                </div>
+              </div>
+
+              <!-- Interactive Live Action -->
+              <button onclick="scrollToMatchEngine()" class="w-full py-3 bg-brand-navy hover:bg-brand-blue text-white rounded-xl font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-md group">
+                <span>Try Custom Matching Engine</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+              </button>
+
+            </div>
+
+            <!-- Floating Badge Accent 1 -->
+            <div class="absolute -bottom-5 -left-5 bg-white p-3 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-2.5 animate-float">
+              <div class="w-9 h-9 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center font-bold">
+                <i data-lucide="percent" class="w-4 h-4"></i>
+              </div>
+              <div class="text-left">
+                <div class="text-[10px] text-slate-500 font-medium">Exclusive Deal</div>
+                <div class="text-xs font-bold text-slate-800">Up to 40% Off Tools</div>
+              </div>
+            </div>
+
+            <!-- Floating Badge Accent 2 -->
+            <div class="absolute -top-4 -right-4 bg-white p-2.5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-brand-green"></span>
+              <span class="text-xs font-extrabold text-brand-navy">Ad-Free Experience Option</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATS & ECOSYSTEM METRICS (Trust builder for both users and advertisers) -->
+  <section class="bg-brand-navy py-12 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-blueLight font-display">50,000+</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-300">Solutions Matched</div>
+          <p class="text-[11px] text-slate-400">Students, creators & businesses</p>
+        </div>
+
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-amber font-display">1,200+</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-300">Verified Providers & Roadmaps</div>
+          <p class="text-[11px] text-slate-400">Strict 4-stage quality audit</p>
+        </div>
+
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-orange font-display">250K+</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-300">Monthly High-Intent Visitors</div>
+          <p class="text-[11px] text-slate-400">High engagement ad network reach</p>
+        </div>
+
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-green font-display">100%</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-300">Transparent & Free Bridge</div>
+          <p class="text-[11px] text-slate-400">Zero hidden commissions for users</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE VERTICALS / AGGREGATOR CATEGORIES SHOWCASE -->
+  <section id="verticals" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+          Our Aggregator Ecosystem
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-display">
+          Ek Platform. Har Problem Ka <span class="gradient-text-blue">Smart Solution.</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Chahe aapko nayi skill sikhni ho, social media pe virality chahiye ho, ya verified professional hire karna ho — SmartWorkWala bridges you to top-rated solutions.
+        </p>
+      </div>
+
+      <!-- Categories Grid (4 Core Pillars) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Pillar 1: Education & Skill Guidance -->
+        <div class="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-blue transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold text-brand-blue uppercase tracking-wider">Vertical 01</span>
+              <h3 class="text-lg font-bold text-brand-navy mt-1 group-hover:text-brand-blue transition-colors">Education & Skill Guidance</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Zero-fluff roadmaps for high-income skills: Coding, AI Automation, Product Design, Finance & Career Counseling.
+              </p>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-200 pt-3">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i>
+                <span>Curated Free & Paid Roadmaps</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i>
+                <span>1-on-1 Mentor Connect</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i>
+                <span>Direct Placement Bridges</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="filterCategory('education')" class="mt-6 w-full py-2.5 px-4 bg-white border border-slate-300 hover:border-brand-blue hover:bg-brand-blue hover:text-white text-slate-700 text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-xs">
+            <span>Explore Skill Roadmaps</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Pillar 2: Social Media Reach & Growth -->
+        <div class="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-orange transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="trending-up" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold text-brand-orange uppercase tracking-wider">Vertical 02</span>
+              <h3 class="text-lg font-bold text-brand-navy mt-1 group-hover:text-brand-orange transition-colors">Social Reach & Virality</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Unlock viral growth on Instagram, YouTube, and LinkedIn. Tested hook formulas, creator toolkits, and monetization strategies.
+              </p>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-200 pt-3">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i>
+                <span>Reels & Shorts Growth Framework</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i>
+                <span>Sponsorship Matching for Creators</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i>
+                <span>Channel & Account Audit Tools</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="filterCategory('social')" class="mt-6 w-full py-2.5 px-4 bg-white border border-slate-300 hover:border-brand-orange hover:bg-brand-orange hover:text-white text-slate-700 text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-xs">
+            <span>Boost Social Reach</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Pillar 3: Service & Talent Matching -->
+        <div class="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-blue transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-brand-navy flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold text-brand-blue uppercase tracking-wider">Vertical 03</span>
+              <h3 class="text-lg font-bold text-brand-navy mt-1 group-hover:text-brand-blue transition-colors">Service Matching Bridge</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Connect directly with verified video editors, web developers, graphic designers, and performance marketers without middleman fees.
+              </p>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-200 pt-3">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i>
+                <span>Pre-Vetted Freelancers & Agencies</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i>
+                <span>Portfolio & Track Record Verification</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i>
+                <span>Fast 24-Hour Turnaround Match</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="filterCategory('services')" class="mt-6 w-full py-2.5 px-4 bg-white border border-slate-300 hover:border-brand-navy hover:bg-brand-navy hover:text-white text-slate-700 text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-xs">
+            <span>Find Verified Talent</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Pillar 4: Curated Tools, SaaS & Deals -->
+        <div class="bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-brand-amber transition-all duration-300 hover:shadow-xl group flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="cpu" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-bold text-amber-600 uppercase tracking-wider">Vertical 04</span>
+              <h3 class="text-lg font-bold text-brand-navy mt-1 group-hover:text-amber-600 transition-colors">Tools & SaaS Directory</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Handpicked AI tools, productivity software, and exclusive coupon codes negotiated specifically for SmartWorkWala community.
+              </p>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-200 pt-3">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i>
+                <span>Up to 50% Exclusive Discount Deals</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i>
+                <span>Best AI Workflows for Productivity</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-green"></i>
+                <span>Free Alternative Finder</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="filterCategory('tools')" class="mt-6 w-full py-2.5 px-4 bg-white border border-slate-300 hover:border-amber-500 hover:bg-amber-500 hover:text-white text-slate-700 text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-xs">
+            <span>Explore Tool Deals</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE SMART MATCH ENGINE (The Core Bridge Experience) -->
+  <section id="match-engine" class="py-20 bg-gradient-to-b from-slate-50 to-blue-50/50 border-y border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Engine Heading -->
+      <div class="text-center space-y-3 mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-brand-blue text-xs font-extrabold uppercase">
+          <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
+          <span>Interactive Recommendation Engine</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-display">
+          Find Your Exact Solution in 3 Clicks
+        </h2>
+        <p class="text-slate-600 text-sm max-w-xl mx-auto">
+          Apna role aur goal select kijiye — humara aggregator algorithm aapko direct verified solutions aur growth roadmaps recommend karega.
+        </p>
+      </div>
+
+      <!-- Interactive Quiz / Match Box -->
+      <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-slate-200/80">
+        
+        <!-- Step 1: Who are you? -->
+        <div class="mb-8">
+          <label class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-3">
+            Step 1: Who are you? (Select your profile)
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="profile-selector">
+            <button onclick="selectProfile(this, 'Student / Fresher')" class="profile-btn border-2 border-brand-blue bg-blue-50/50 text-brand-navy p-3 rounded-2xl text-left hover:border-brand-blue transition-all active flex flex-col justify-between h-24">
+              <i data-lucide="graduation-cap" class="w-5 h-5 text-brand-blue"></i>
+              <span class="text-xs font-bold">Student / Job Seeker</span>
+            </button>
+            <button onclick="selectProfile(this, 'Content Creator')" class="profile-btn border-2 border-slate-200 bg-white text-slate-700 p-3 rounded-2xl text-left hover:border-brand-blue transition-all flex flex-col justify-between h-24">
+              <i data-lucide="video" class="w-5 h-5 text-brand-orange"></i>
+              <span class="text-xs font-bold">Content Creator / Influencer</span>
+            </button>
+            <button onclick="selectProfile(this, 'Freelancer / Agency')" class="profile-btn border-2 border-slate-200 bg-white text-slate-700 p-3 rounded-2xl text-left hover:border-brand-blue transition-all flex flex-col justify-between h-24">
+              <i data-lucide="briefcase" class="w-5 h-5 text-brand-blue"></i>
+              <span class="text-xs font-bold">Freelancer / Agency</span>
+            </button>
+            <button onclick="selectProfile(this, 'Business Owner')" class="profile-btn border-2 border-slate-200 bg-white text-slate-700 p-3 rounded-2xl text-left hover:border-brand-blue transition-all flex flex-col justify-between h-24">
+              <i data-lucide="store" class="w-5 h-5 text-brand-green"></i>
+              <span class="text-xs font-bold">Small Business Owner</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: What is your primary immediate need? -->
+        <div class="mb-8">
+          <label class="block text-xs font-extrabold text-slate-500 uppercase tracking-wider mb-3">
+            Step 2: What is your primary objective right now?
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="goal-selector">
+            <button onclick="selectGoal(this, 'Skill & Career Growth')" class="goal-btn border-2 border-brand-blue bg-blue-50/50 text-brand-navy p-3.5 rounded-2xl text-left hover:border-brand-blue transition-all active">
+              <div class="font-bold text-xs">🎓 Learn High-Income Skills</div>
+              <div class="text-[11px] text-slate-500 mt-0.5">Coding, AI, Editing, or Career Roadmap</div>
+            </button>
+            <button onclick="selectGoal(this, 'Social Reach & Followers')" class="goal-btn border-2 border-slate-200 bg-white text-slate-700 p-3.5 rounded-2xl text-left hover:border-brand-blue transition-all">
+              <div class="font-bold text-xs">📈 Scale Social Media Reach</div>
+              <div class="text-[11px] text-slate-500 mt-0.5">Viral hooks, algorithm strategy & editing</div>
+            </button>
+            <button onclick="selectGoal(this, 'Hire Verified Talent / Services')" class="goal-btn border-2 border-slate-200 bg-white text-slate-700 p-3.5 rounded-2xl text-left hover:border-brand-blue transition-all">
+              <div class="font-bold text-xs">💼 Hire Vetted Services / Automation</div>
+              <div class="text-[11px] text-slate-500 mt-0.5">Affordable developers, editors, AI tools</div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+          <button onclick="generateMatchResults()" class="w-full sm:w-auto flex-1 bg-gradient-to-r from-brand-blue via-blue-600 to-brand-navy text-white py-3.5 px-8 rounded-xl font-bold text-sm shadow-glow-blue hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
+            <i data-lucide="zap" class="w-4 h-4 text-brand-amber"></i>
+            <span>Generate Instant Matched Solutions</span>
+          </button>
+          <button onclick="resetMatchEngine()" class="text-xs font-semibold text-slate-500 hover:text-slate-800 underline">
+            Reset Selection
+          </button>
+        </div>
+
+        <!-- DYNAMIC RESULTS DISPLAY AREA -->
+        <div id="match-results-box" class="mt-8 pt-8 border-t border-slate-100">
+          <div class="flex items-center justify-between mb-4">
+            <h4 class="text-sm font-extrabold text-brand-navy flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4 text-brand-orange"></i>
+              <span>SmartWorkWala Recommended Solutions:</span>
+            </h4>
+            <span class="text-xs text-brand-green font-bold bg-green-50 px-2.5 py-1 rounded-full border border-green-200">
+              Verified Aggregator Output
+            </span>
+          </div>
+
+          <div id="dynamic-cards" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Default Results (Populated via JS) -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS: THE 3-STEP AGGREGATOR PROCESS -->
+  <section id="how-it-works" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-brand-orange bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+          Process Simplicity
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-display">
+          How SmartWorkWala Bridges the Gap
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Internet par lakho options hain, par kaunsa trustworthy hai? Humara 3-step system aapko direct reliable result tak pahunchata hai.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        
+        <!-- Connecting Line in Desktop -->
+        <div class="hidden md:block absolute top-1/2 left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-brand-blue via-brand-orange to-brand-green -translate-y-8 z-0"></div>
+
+        <!-- Step 1 -->
+        <div class="relative z-10 bg-slate-50 rounded-3xl p-8 border border-slate-200 text-center space-y-4 hover:shadow-lg transition-all">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-brand-blue text-white flex items-center justify-center font-display font-extrabold text-xl shadow-glow-blue">
+            01
+          </div>
+          <h3 class="text-lg font-bold text-brand-navy">Submit Your Need</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Search bar me apna goal type karein ya quick quiz complete karein. Specify budget, target timeline aur exact requirement.
+          </p>
+          <div class="inline-block text-[11px] font-semibold text-brand-blue bg-blue-100/60 px-3 py-1 rounded-full">
+            Under 30 Seconds
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative z-10 bg-slate-50 rounded-3xl p-8 border border-slate-200 text-center space-y-4 hover:shadow-lg transition-all">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-brand-orange text-white flex items-center justify-center font-display font-extrabold text-xl shadow-glow-orange">
+            02
+          </div>
+          <h3 class="text-lg font-bold text-brand-navy">Intelligent Aggregation</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            SmartWorkWala filters out 99% of scam courses, overpriced agencies, and junk tools. Aapko milta hai sirf curated top 1% verified options.
+          </p>
+          <div class="inline-block text-[11px] font-semibold text-brand-orange bg-orange-100/60 px-3 py-1 rounded-full">
+            Quality Audited
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative z-10 bg-slate-50 rounded-3xl p-8 border border-slate-200 text-center space-y-4 hover:shadow-lg transition-all">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-brand-green text-white flex items-center justify-center font-display font-extrabold text-xl shadow-md">
+            03
+          </div>
+          <h3 class="text-lg font-bold text-brand-navy">Connect & Accelerate</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Directly access roadmap, hire verified professionals, claim exclusive discounts, aur continuous community support ke saath grow karein.
+          </p>
+          <div class="inline-block text-[11px] font-semibold text-brand-green bg-green-100/60 px-3 py-1 rounded-full">
+            Fast Execution
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MONETIZATION & AD-NETWORK SPONSORSHIP PLACEMENT SHOWCASE -->
+  <section id="sponsorship-showcase" class="py-16 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Subtle Monetization Header -->
+      <div class="flex flex-col sm:flex-row items-center justify-between mb-8 gap-4">
+        <div>
+          <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+            <i data-lucide="tag" class="w-3.5 h-3.5 text-brand-orange"></i>
+            <span>Featured Partner Placements & Verified Spotlights</span>
+          </span>
+          <h3 class="text-2xl font-extrabold text-brand-navy font-display mt-1">
+            Exclusive Community Deals & Sponsored Picks
+          </h3>
+        </div>
+        <a href="#for-sponsors" class="text-xs font-bold text-brand-blue hover:text-brand-navy flex items-center gap-1">
+          <span>Place Your Brand / Ad Here</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <!-- High-CTR Native Banner / Sponsored Placement Mockup -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Sponsored Card 1 (High engagement native ad placement) -->
+        <div class="gradient-border-wrapper">
+          <div class="gradient-border-content p-6 flex flex-col justify-between h-full">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-[10px]">
+                <span class="bg-amber-100 text-amber-900 font-extrabold px-2 py-0.5 rounded tracking-wide">
+                  FEATURED PARTNER
+                </span>
+                <span class="text-slate-400 font-semibold">Sponsored</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-xl">
+                  🚀
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-brand-navy">Hostinger Cloud Web Hosting</h4>
+                  <p class="text-xs text-slate-500">Official Infrastructure Partner</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-600">
+                Launch your portfolio or website with free domain + SSL. Special SmartWorkWala 75% Off coupon included.
+              </p>
+            </div>
+            <div class="pt-4 mt-2 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-extrabold text-brand-orange">CODE: SMARTWORK75</span>
+              <button onclick="trackAdClick('Hostinger')" class="text-xs font-bold text-white bg-brand-navy hover:bg-brand-blue px-3 py-1.5 rounded-lg transition-colors">
+                Claim Deal &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sponsored Card 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-brand-blue transition-all shadow-sm flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-[10px]">
+              <span class="bg-blue-100 text-brand-blue font-extrabold px-2 py-0.5 rounded tracking-wide">
+                TOP-RATED TOOL
+              </span>
+              <span class="text-slate-400 font-semibold">Verified Match</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-purple-600 text-white flex items-center justify-center font-bold text-xl">
+                ✨
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-brand-navy">Descript / CapCut Pro Toolkit</h4>
+                <p class="text-xs text-slate-500">Video Editing Accelerator</p>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600">
+              Cut editing time by 70% with automatic captions, silence removal, and AI voice cloning templates.
+            </p>
+          </div>
+          <div class="pt-4 mt-2 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-brand-green">Free Tier Available</span>
+            <button onclick="trackAdClick('CapCutTool')" class="text-xs font-bold text-brand-blue hover:underline">
+              Access Tool &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Sponsored Card 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-brand-green transition-all shadow-sm flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-[10px]">
+              <span class="bg-green-100 text-brand-green font-extrabold px-2 py-0.5 rounded tracking-wide">
+                BOOTCAMP SPOTLIGHT
+              </span>
+              <span class="text-slate-400 font-semibold">Sponsored</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-xl">
+                💻
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-brand-navy">Full Stack Python & AI Cohort</h4>
+                <p class="text-xs text-slate-500">12-Week Intensive Program</p>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600">
+              Zero coding background needed. Build 6 production-grade apps with job referral assistance.
+            </p>
+          </div>
+          <div class="pt-4 mt-2 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-700">Next Cohort: 15 Seats Left</span>
+            <button onclick="trackAdClick('PythonCohort')" class="text-xs font-bold text-emerald-700 hover:underline">
+              View Curriculum &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE: SMARTWORKWALA VS UNFILTERED INTERNET -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy font-display">
+          Why SmartWorkWala vs Random Web Search?
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm">
+          Why waste 40 hours scrolling fake YouTube courses and spam freelancer groups?
+        </p>
+      </div>
+
+      <div class="overflow-x-auto shadow-md rounded-2xl border border-slate-200">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+              <th class="p-4 sm:p-5">Feature / Metric</th>
+              <th class="p-4 sm:p-5 text-slate-500">Google / Social Media Search</th>
+              <th class="p-4 sm:p-5 bg-blue-50/80 text-brand-blue border-l border-r border-blue-200 font-extrabold">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-base">🚀</span>
+                  <span>SmartWorkWala Bridge</span>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="p-4 sm:p-5 font-semibold text-slate-800">Quality of Guidance</td>
+              <td class="p-4 sm:p-5 text-slate-500">Overwhelming, contradictory, full of fake claims</td>
+              <td class="p-4 sm:p-5 bg-blue-50/30 font-bold text-emerald-700 border-l border-r border-blue-200">
+                100% Curated & Vetted roadmaps only
+              </td>
+            </tr>
+            <tr>
+              <td class="p-4 sm:p-5 font-semibold text-slate-800">Freelancer & Service Reliability</td>
+              <td class="p-4 sm:p-5 text-slate-500">High risk of ghosting, poor quality, no escrow</td>
+              <td class="p-4 sm:p-5 bg-blue-50/30 font-bold text-emerald-700 border-l border-r border-blue-200">
+                Verified portfolio, track record & replacement guarantee
+              </td>
+            </tr>
+            <tr>
+              <td class="p-4 sm:p-5 font-semibold text-slate-800">Time to Find Best Solution</td>
+              <td class="p-4 sm:p-5 text-slate-500">10 to 40 hours of research</td>
+              <td class="p-4 sm:p-5 bg-blue-50/30 font-bold text-emerald-700 border-l border-r border-blue-200">
+                Instant (Under 2 minutes with Match Engine)
+              </td>
+            </tr>
+            <tr>
+              <td class="p-4 sm:p-5 font-semibold text-slate-800">Cost to Users</td>
+              <td class="p-4 sm:p-5 text-slate-500">High upfront consulting or commission fees</td>
+              <td class="p-4 sm:p-5 bg-blue-50/30 font-bold text-emerald-700 border-l border-r border-blue-200">
+                Free for seekers (Supported by brand partners)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOR PARTNERS & ADVERTISERS SECTION (Revenue Generation Focus) -->
+  <section id="for-sponsors" class="py-20 bg-gradient-to-br from-brand-navyDark via-brand-navy to-slate-900 text-white relative overflow-hidden">
+    
+    <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-brand-amber text-xs font-bold uppercase tracking-wider">
+            <span>B2B Growth & Monetization</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-display leading-tight">
+            Reach Thousands of <span class="gradient-text-orange">High-Intent Seekers</span> on SmartWorkWala
+          </h2>
+
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+            Are you an EdTech platform, SaaS tool, digital agency, or brand looking for laser-targeted, ready-to-convert users? SmartWorkWala connects high-intent students, creators, and freelancers right at their decision-making moment.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+            <div class="bg-white/5 border border-white/10 p-4 rounded-xl">
+              <div class="text-2xl font-extrabold text-brand-blueLight font-display">8.4%</div>
+              <div class="text-xs text-slate-300 font-semibold mt-1">Average CTR</div>
+              <div class="text-[10px] text-slate-400">3x industry standard</div>
+            </div>
+            <div class="bg-white/5 border border-white/10 p-4 rounded-xl">
+              <div class="text-2xl font-extrabold text-brand-amber font-display">72%</div>
+              <div class="text-xs text-slate-300 font-semibold mt-1">Gen-Z & Creators</div>
+              <div class="text-[10px] text-slate-400">High engagement demographic</div>
+            </div>
+            <div class="bg-white/5 border border-white/10 p-4 rounded-xl col-span-2 sm:col-span-1">
+              <div class="text-2xl font-extrabold text-brand-green font-display">Zero Spam</div>
+              <div class="text-xs text-slate-300 font-semibold mt-1">Native Ad Formats</div>
+              <div class="text-[10px] text-slate-400">Seamless integration</div>
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4">
+            <button onclick="openModal('advertise')" class="bg-brand-orange hover:bg-amber-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-glow-orange transition-all flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>Request Media Kit & Ad Rates</span>
+            </button>
+            <button onclick="openModal('list-service')" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-6 py-3.5 rounded-xl border border-white/20 transition-all">
+              List Your Agency / Course
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-6 sm:p-8 rounded-3xl space-y-5">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="pie-chart" class="w-5 h-5 text-brand-amber"></i>
+              <span>Available Partnership Formats</span>
+            </h3>
+            
+            <div class="space-y-3 text-xs">
+              <div class="p-3 bg-white/5 rounded-xl border border-white/10 flex items-start gap-3">
+                <span class="p-1.5 rounded-lg bg-blue-500/20 text-blue-400 shrink-0">1</span>
+                <div>
+                  <h4 class="font-bold text-slate-100">Featured Vertical Spotlights</h4>
+                  <p class="text-slate-300 text-[11px]">Pin your service to the top of category searches with a verified badge.</p>
+                </div>
+              </div>
+              <div class="p-3 bg-white/5 rounded-xl border border-white/10 flex items-start gap-3">
+                <span class="p-1.5 rounded-lg bg-orange-500/20 text-orange-400 shrink-0">2</span>
+                <div>
+                  <h4 class="font-bold text-slate-100">Dedicated Match Engine Inclusions</h4>
+                  <p class="text-slate-300 text-[11px]">Direct algorithmic recommendations when users match your target criteria.</p>
+                </div>
+              </div>
+              <div class="p-3 bg-white/5 rounded-xl border border-white/10 flex items-start gap-3">
+                <span class="p-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 shrink-0">3</span>
+                <div>
+                  <h4 class="font-bold text-slate-100">Newsletter & Community Blasts</h4>
+                  <p class="text-slate-300 text-[11px]">Reach 35,000+ active email subscribers eager for software discounts and guidance.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-[11px] text-slate-400 text-center pt-2">
+              Fast onboarding • Custom tracking links • Transparent analytics
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS & CASE STUDIES -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-blue">Success Stories</span>
+        <h2 class="text-3xl font-extrabold text-brand-navy font-display">Real People. Real Results.</h2>
+        <p class="text-slate-600 text-sm">See how SmartWorkWala transformed their learning and work journey.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Story 1 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-1 text-amber-400">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed italic">
+            "Maine 6 mahine coding sikhne ki koshish ki par bohot bhatak gaya tha. SmartWorkWala ne mujhe ek single curated roadmap aur ek verified mentor se connect kiya. Aaj mai remote frontend intern hoon!"
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-blue-100 font-bold text-brand-blue flex items-center justify-center text-xs">
+              AK
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-800">Aman Kumar</h4>
+              <p class="text-[11px] text-slate-500">Student & Jr. Developer, Patna</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-1 text-amber-400">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed italic">
+            "Reels banate the par reach 2,000 par atak gayi thi. Inke 'Social Reach & Virality' toolkit aur recommended editor ki wajah se meri 4 reels million touch kar gayi in just 45 days!"
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-orange-100 font-bold text-brand-orange flex items-center justify-center text-xs">
+              PS
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-800">Pooja Sharma</h4>
+              <p class="text-[11px] text-slate-500">Finance Content Creator (85k Followers)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-1 text-amber-400">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed italic">
+            "As an agency, humein client projects ke liye reliable freelance React developers chahiye the. Traditional platforms pe time waste hota tha. SmartWorkWala bridged us with pre-vetted devs in 24 hours."
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-green-100 font-bold text-brand-green flex items-center justify-center text-xs">
+              RM
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-800">Rohit Mehta</h4>
+              <p class="text-[11px] text-slate-500">Founder, ScaleDigital Media</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEWSLETTER / COMMUNITY LEAD CAPTURE -->
+  <section class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-blue-600 to-brand-navy rounded-3xl p-8 sm:p-12 text-white text-center space-y-6 shadow-2xl relative overflow-hidden">
+        
+        <div class="relative z-10 max-w-xl mx-auto space-y-3">
+          <span class="px-3 py-1 bg-white/20 text-xs font-bold rounded-full uppercase tracking-wider">
+            Free Weekly Drops
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold font-display">
+            Join 35,000+ Smart Workers
+          </h2>
+          <p class="text-xs sm:text-sm text-blue-100 leading-relaxed">
+            Har Sunday: Handpicked skill roadmaps, trending AI tools, creator growth hacks, aur exclusive freelance opportunities seedhe aapke inbox me. Zero spam.
+          </p>
+        </div>
+
+        <form id="newsletter-form" onsubmit="handleNewsletter(event)" class="relative z-10 max-w-md mx-auto flex flex-col sm:flex-row gap-2">
+          <input 
+            type="email" 
+            id="newsletter-email"
+            required
+            placeholder="Apna email address daalein..." 
+            class="flex-1 px-4 py-3 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand-amber font-medium"
+          >
+          <button type="submit" class="bg-brand-orange hover:bg-amber-600 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-md shrink-0">
+            Subscribe Free
+          </button>
+        </form>
+
+        <p class="text-[11px] text-blue-200/80">
+          🔒 Aapka data 100% secure hai. Unsubscribe anytime with 1 click.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-navyDark text-slate-300 pt-16 pb-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="#" class="inline-block">
+            <img src="assets/logo.png" alt="SmartWorkWala" class="h-12 w-auto object-contain filter brightness-0 invert">
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            SmartWorkWala (<a href="https://smartworkwala.com" class="text-brand-blueLight hover:underline font-semibold">smartworkwala.com</a>) is India's leading digital aggregator and intermediate bridge, empowering individuals and businesses with verified guidance, digital tools, and opportunity matching.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-blue hover:text-white flex items-center justify-center transition-colors text-slate-400">
+              <i data-lucide="twitter" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-blue hover:text-white flex items-center justify-center transition-colors text-slate-400">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-blue hover:text-white flex items-center justify-center transition-colors text-slate-400">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-blue hover:text-white flex items-center justify-center transition-colors text-slate-400">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 1: Solutions Hub -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-white">Aggregator Hub</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#verticals" class="hover:text-white transition-colors">Education & Skills</a></li>
+            <li><a href="#verticals" class="hover:text-white transition-colors">Social Reach & Virality</a></li>
+            <li><a href="#verticals" class="hover:text-white transition-colors">Freelancer Matching</a></li>
+            <li><a href="#verticals" class="hover:text-white transition-colors">AI & SaaS Tool Directory</a></li>
+            <li><a href="#match-engine" class="hover:text-brand-amber font-semibold transition-colors">Smart Match Engine</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: For Partners & Sponsors -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-white">For Partners</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#for-sponsors" class="hover:text-white transition-colors">Advertise With Us</a></li>
+            <li><a href="#for-sponsors" class="hover:text-white transition-colors">List Your Course / Agency</a></li>
+            <li><a href="#for-sponsors" class="hover:text-white transition-colors">Affiliate & Ad Network</a></li>
+            <li><a href="#for-sponsors" class="hover:text-white transition-colors">Sponsorship Media Kit</a></li>
+            <li><button onclick="openModal('advertise')" class="text-brand-orange hover:underline font-bold text-left">Partner Inquiries</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company & Trust -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-white">Trust & Legal</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#" class="hover:text-white transition-colors">About SmartWorkWala</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Verification Criteria</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Support</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          &copy; 2026 SmartWorkWala (smartworkwala.com). All rights reserved. Built with ❤️ for Bharat's smart workers.
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5 text-slate-400">
+            <span class="w-2 h-2 rounded-full bg-brand-green"></span>
+            <span>All Systems Operational</span>
+          </span>
+          <span>•</span>
+          <span class="text-slate-400">Aggregator & Intermediate Bridge Platform</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE POPUP MODAL (Match / Advertise / Post Requirement) -->
+  <div id="action-modal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100 animate-in fade-in zoom-in duration-200">
+      
+      <!-- Close Button -->
+      <button onclick="closeModal()" class="absolute top-5 right-5 p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="space-y-2 mb-6">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100 text-brand-blue text-[11px] font-bold">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span id="modal-badge">Smart Solution Match</span>
+        </div>
+        <h3 id="modal-title" class="text-xl font-extrabold text-brand-navy font-display">
+          Connect to Your Curated Solution
+        </h3>
+        <p id="modal-desc" class="text-xs text-slate-600">
+          Apni requirement bataiye — humari team aapko best verified options se connect karegi.
+        </p>
+      </div>
+
+      <!-- Modal Form -->
+      <form id="modal-form" onsubmit="handleModalSubmit(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Your Full Name</label>
+          <input type="text" id="modal-name" required placeholder="E.g., Rahul Verma" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue">
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">WhatsApp Number / Email</label>
+          <input type="text" id="modal-contact" required placeholder="E.g., +91 9876543210 ya email@domain.com" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue">
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">What are you looking for?</label>
+          <select id="modal-category" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue bg-white">
+            <option value="skill">🎓 Education & Skill Roadmap Guidance</option>
+            <option value="social">📈 Social Media Reach / Viral Growth</option>
+            <option value="service">💼 Verified Freelancer / Service Match</option>
+            <option value="tools">⚡ AI Tools & SaaS Discount Deals</option>
+            <option value="partner">🤝 Advertise / Partner with SmartWorkWala</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Brief Details (Optional)</label>
+          <textarea id="modal-notes" rows="2" placeholder="Kuch specific requirement ya budget ho toh batayein..." class="w-full px-3.5 py-2 border border-slate-300 rounded-xl focus:outline-none focus:border-brand-blue"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-brand-blue hover:bg-brand-navy text-white font-bold py-3 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
+          <span>Submit & Get Connected</span>
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+
+        <p class="text-[10px] text-center text-slate-500">
+          We respect your privacy. No spam calls. 100% verified bridge.
+        </p>
+      </form>
+
+      <!-- Success Feedback Overlay -->
+      <div id="modal-success" class="hidden absolute inset-0 bg-white rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-4">
+        <div class="w-16 h-16 rounded-full bg-green-100 text-brand-green flex items-center justify-center text-2xl">
+          <i data-lucide="check-circle" class="w-8 h-8"></i>
+        </div>
+        <h4 class="text-xl font-bold text-brand-navy">Requirement Received!</h4>
+        <p class="text-xs text-slate-600 max-w-xs">
+          Shukriya! SmartWorkWala team aapke requirement ke according top verified solutions WhatsApp/Email par share karegi.
+        </p>
+        <button onclick="closeModal()" class="bg-brand-navy text-white text-xs font-bold px-6 py-2.5 rounded-xl">
+          Back to Hub
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC FOR INTERACTIVITY -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Interactive State for Quiz Engine
+    let currentProfile = 'Student / Fresher';
+    let currentGoal = 'Skill & Career Growth';
+
+    const matchSolutionsDatabase = {
+      'Student / Fresher': {
+        'Skill & Career Growth': [
+          {
+            title: 'Full Stack & AI Dev Roadmap (2026 Edition)',
+            provider: 'Curated Open Source + Mentored Sprint',
+            rating: '4.9★ (12k learners)',
+            tag: 'Top Pick',
+            cta: 'Access Free Roadmap',
+            desc: 'Step-by-step verified path from zero to building full-stack applications with AI APIs.'
+          },
+          {
+            title: 'Remote Internship Bridge Program',
+            provider: 'Verified Partner Network',
+            rating: '4.8★ (450+ placed)',
+            tag: 'Direct Placement',
+            cta: 'Apply for Match',
+            desc: 'Direct bridge to verified startups looking for entry-level tech and design interns.'
+          }
+        ],
+        'Social Reach & Followers': [
+          {
+            title: 'Student Creator Micro-Influencer Blueprint',
+            provider: 'SWW Growth Labs',
+            rating: '4.8★ (3,400+ students)',
+            tag: 'Zero to 10k',
+            cta: 'Get Toolkit',
+            desc: 'Turn your college learnings and projects into high-reach LinkedIn & Twitter personal brand.'
+          },
+          {
+            title: 'Canva & CapCut Content Creator Pack',
+            provider: 'Creator Hub India',
+            rating: '4.9★ (8k downloads)',
+            tag: 'Free Templates',
+            cta: 'Download Pack',
+            desc: '100+ viral hooks and editable templates crafted for student educators and vloggers.'
+          }
+        ],
+        'Hire Verified Talent / Services': [
+          {
+            title: 'Budget Portfolio Website Builder',
+            provider: 'Verified Junior Pro Network',
+            rating: '4.7★ (320 reviews)',
+            tag: 'Affordable',
+            cta: 'Get Portfolio Built',
+            desc: 'Get your custom developer/designer portfolio built in 48 hours for nominal cost.'
+          },
+          {
+            title: 'ATS Resume Review & Optimization',
+            provider: 'HR Mentor Bridge',
+            rating: '4.9★ (1,800+ reviews)',
+            tag: 'Guaranteed Score',
+            cta: 'Optimize Resume',
+            desc: 'Pass automated hiring filters with curated industry resume templates.'
+          }
+        ]
+      },
+      'Content Creator': {
+        'Social Reach & Followers': [
+          {
+            title: 'Shorts & Reels Virality Framework 4.0',
+            provider: 'Top 1% Creator Circle',
+            rating: '4.9★ (15k creators)',
+            tag: 'High Virality',
+            cta: 'Unlock Strategy',
+            desc: 'Proven pacing, retention retention graph hacks, and hook retention scripts.'
+          },
+          {
+            title: 'Brand Sponsorship Matchmaker',
+            provider: 'SWW Creator Monetization',
+            rating: '4.8★ (700+ deals closed)',
+            tag: 'Monetization',
+            cta: 'Get Listed for Deals',
+            desc: 'Bridge with direct D2C & EdTech brands looking for creators between 10k-250k followers.'
+          }
+        ],
+        'Skill & Career Growth': [
+          {
+            title: 'Advanced Storytelling & Editing Masterclass',
+            provider: 'Curated Editor Bootcamp',
+            rating: '4.9★ (2,100+ editors)',
+            tag: 'High-Retention',
+            cta: 'Explore Course',
+            desc: 'Master sound design, visual pacing, dynamic zooms, and Premiere Pro / DaVinci workflows.'
+          },
+          {
+            title: 'Creator Economy Business Blueprint',
+            provider: 'SWW Growth Bridge',
+            rating: '4.8★ (950 reviews)',
+            tag: 'Scaling',
+            cta: 'Read Guide',
+            desc: 'How to transition from ad-sense dependency to digital products and memberships.'
+          }
+        ],
+        'Hire Verified Talent / Services': [
+          {
+            title: 'Dedicated Short-Form Video Editors',
+            provider: 'Vetted Editor Guild',
+            rating: '4.9★ (420+ creators matched)',
+            tag: 'Top 1% Tested',
+            cta: 'Hire Tested Editor',
+            desc: 'Pre-screened video editors specialized in Alex Hormozi and Dhruv Rathee style edits.'
+          },
+          {
+            title: 'Thumbnail & Graphic Retainer Service',
+            provider: 'PixelCraft Studio',
+            rating: '4.8★ (150+ channels)',
+            tag: 'High CTR',
+            cta: 'Request Sample',
+            desc: 'Boost video click-through-rates with custom 3D and typography thumbnails.'
+          }
+        ]
+      },
+      'Freelancer / Agency': {
+        'Hire Verified Talent / Services': [
+          {
+            title: 'White-Label Subcontractor Network',
+            provider: 'SWW Agency Bridge',
+            rating: '4.9★ (250+ agencies)',
+            tag: 'On-Demand Scale',
+            cta: 'Bridge Subcontractors',
+            desc: 'Never reject a project due to bandwidth. Access trusted vetted backend devs & designers.'
+          },
+          {
+            title: 'Client Contract & Escrow Guarantee Suite',
+            provider: 'LegalTech Partner',
+            rating: '4.8★ (1,100+ freelancers)',
+            tag: 'Risk-Free',
+            cta: 'Download Contracts',
+            desc: 'Bulletproof contracts preventing scope creep and late payment disputes.'
+          }
+        ],
+        'Skill & Career Growth': [
+          {
+            title: 'High-Ticket Client Acquisition Pipeline',
+            provider: 'Agency Scale Mastermind',
+            rating: '4.9★ (3,800+ freelancers)',
+            tag: 'Scale to $5k/mo',
+            cta: 'View Strategy',
+            desc: 'Cold outbound, LinkedIn optimization, and inbound offer architecture.'
+          },
+          {
+            title: 'AI Automation Workflow Consultant Roadmap',
+            provider: 'NextGen AI Guild',
+            rating: '4.9★ (1,500+ pros)',
+            tag: 'High Hourly Rate',
+            cta: 'Learn AI Consulting',
+            desc: 'Build Make.com, n8n, and custom OpenAI bot solutions for small businesses.'
+          }
+        ],
+        'Social Reach & Followers': [
+          {
+            title: 'LinkedIn B2B Authority System',
+            provider: 'SWW B2B Growth Engine',
+            rating: '4.8★ (2,900+ users)',
+            tag: 'Inbound Leads',
+            cta: 'Access System',
+            desc: 'Generate 5-10 qualified client calls every month without spending on ads.'
+          },
+          {
+            title: 'Agency Case Study Showcase Kit',
+            provider: 'Conversion Lab',
+            rating: '4.7★ (450+ agencies)',
+            tag: 'High Conversion',
+            cta: 'Get Kit',
+            desc: 'Turn completed projects into undeniable visual proof that sells itself.'
+          }
+        ]
+      },
+      'Business Owner': {
+        'Hire Verified Talent / Services': [
+          {
+            title: 'Dedicated Full-Stack Developer on Demand',
+            provider: 'SWW Vetted Dev Network',
+            rating: '4.9★ (650+ startups)',
+            tag: 'Verified Top 3%',
+            cta: 'Request Dev Profile',
+            desc: 'React, Node, Mobile Apps, or Shopify specialists with immediate availability.'
+          },
+          {
+            title: 'Performance Marketing & Meta Ads Specialists',
+            provider: 'GrowthScale Vetted Agencies',
+            rating: '4.8★ (4.2x Avg ROAS)',
+            tag: 'Results Driven',
+            cta: 'Get Free Audit',
+            desc: 'Drive measurable sales and leads with verified performance media buyers.'
+          }
+        ],
+        'Skill & Career Growth': [
+          {
+            title: 'AI Business Automation Playbook',
+            provider: 'SWW Tech Bridge',
+            rating: '4.9★ (1,200+ founders)',
+            tag: 'Save 20 hrs/wk',
+            cta: 'Get Playbook',
+            desc: 'Automate WhatsApp customer support, invoicing, and CRM follow-ups seamlessly.'
+          },
+          {
+            title: 'D2C E-Commerce Growth Masterclass',
+            provider: 'Founder Guild',
+            rating: '4.8★ (850+ stores)',
+            tag: 'Scale to ₹1Cr/mo',
+            cta: 'Access Guide',
+            desc: 'Supply chain, return-to-origin reduction, and brand positioning insights.'
+          }
+        ],
+        'Social Reach & Followers': [
+          {
+            title: 'Brand Video Production & Social Distribution',
+            provider: 'Verified Media Network',
+            rating: '4.9★ (300+ brands)',
+            tag: 'Full Turnkey',
+            cta: 'Book Production',
+            desc: 'End-to-end podcast, founder brand reels, and corporate showreels.'
+          },
+          {
+            title: 'Influencer Collaboration Engine',
+            provider: 'SWW Influencer Aggregator',
+            rating: '4.8★ (150+ campaigns)',
+            tag: 'Guaranteed ROI',
+            cta: 'Launch Campaign',
+            desc: 'Curated roster of micro-influencers with engaged regional followings.'
+          }
+        ]
+      }
+    };
+
+    function selectProfile(btn, profileName) {
+      document.querySelectorAll('.profile-btn').forEach(b => {
+        b.classList.remove('border-brand-blue', 'bg-blue-50/50', 'text-brand-navy');
+        b.classList.add('border-slate-200', 'bg-white', 'text-slate-700');
+      });
+      btn.classList.remove('border-slate-200', 'bg-white', 'text-slate-700');
+      btn.classList.add('border-brand-blue', 'bg-blue-50/50', 'text-brand-navy');
+      currentProfile = profileName;
+    }
+
+    function selectGoal(btn, goalName) {
+      document.querySelectorAll('.goal-btn').forEach(b => {
+        b.classList.remove('border-brand-blue', 'bg-blue-50/50', 'text-brand-navy');
+        b.classList.add('border-slate-200', 'bg-white', 'text-slate-700');
+      });
+      btn.classList.remove('border-slate-200', 'bg-white', 'text-slate-700');
+      btn.classList.add('border-brand-blue', 'bg-blue-50/50', 'text-brand-navy');
+      currentGoal = goalName;
+    }
+
+    function generateMatchResults() {
+      const container = document.getElementById('dynamic-cards');
+      container.innerHTML = '';
+
+      const results = (matchSolutionsDatabase[currentProfile] && matchSolutionsDatabase[currentProfile][currentGoal]) 
+        || matchSolutionsDatabase['Student / Fresher']['Skill & Career Growth'];
+
+      results.forEach(res => {
+        const card = document.createElement('div');
+        card.className = "bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-brand-blue hover:shadow-md transition-all flex flex-col justify-between";
+        card.innerHTML = `
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-blue-100 text-brand-blue">
+                ${res.tag}
+              </span>
+              <span class="text-xs font-bold text-amber-500 flex items-center gap-1">
+                ${res.rating}
+              </span>
+            </div>
+            <h5 class="font-bold text-sm text-brand-navy leading-snug">${res.title}</h5>
+            <p class="text-[11px] text-slate-500">${res.provider}</p>
+            <p class="text-xs text-slate-600 leading-relaxed">${res.desc}</p>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-emerald-600 font-bold">100% Free Bridge</span>
+            <button onclick="openModalWithDetails('${res.title}')" class="text-xs font-bold bg-brand-navy hover:bg-brand-blue text-white px-3.5 py-1.5 rounded-lg transition-colors flex items-center gap-1">
+              <span>${res.cta}</span>
+              <i data-lucide="arrow-right" class="w-3 h-3"></i>
+            </button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    function resetMatchEngine() {
+      const firstProfile = document.querySelector('.profile-btn');
+      const firstGoal = document.querySelector('.goal-btn');
+      if (firstProfile) selectProfile(firstProfile, 'Student / Fresher');
+      if (firstGoal) selectGoal(firstGoal, 'Skill & Career Growth');
+      generateMatchResults();
+    }
+
+    function scrollToMatchEngine() {
+      document.getElementById('match-engine').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Hero search handler
+    function handleHeroSearch() {
+      const input = document.getElementById('hero-search-input');
+      const val = input.value.trim();
+      if (!val) {
+        scrollToMatchEngine();
+        return;
+      }
+      openModalWithDetails('Search for: ' + val);
+    }
+
+    function fillSearch(query) {
+      const input = document.getElementById('hero-search-input');
+      input.value = query;
+      handleHeroSearch();
+    }
+
+    function filterCategory(cat) {
+      if (cat === 'education') {
+        currentProfile = 'Student / Fresher';
+        currentGoal = 'Skill & Career Growth';
+      } else if (cat === 'social') {
+        currentProfile = 'Content Creator';
+        currentGoal = 'Social Reach & Followers';
+      } else if (cat === 'services') {
+        currentProfile = 'Business Owner';
+        currentGoal = 'Hire Verified Talent / Services';
+      } else {
+        currentProfile = 'Freelancer / Agency';
+        currentGoal = 'Hire Verified Talent / Services';
+      }
+      scrollToMatchEngine();
+      generateMatchResults();
+    }
+
+    function trackAdClick(dealName) {
+      openModalWithDetails('Claim Deal / Access: ' + dealName);
+    }
+
+    // Modal Control
+    const actionModal = document.getElementById('action-modal');
+    const modalSuccess = document.getElementById('modal-success');
+    const modalTitle = document.getElementById('modal-title');
+    const modalBadge = document.getElementById('modal-badge');
+    const modalNotes = document.getElementById('modal-notes');
+
+    function openModal(type) {
+      modalSuccess.classList.add('hidden');
+      actionModal.classList.remove('hidden');
+
+      if (type === 'advertise') {
+        modalBadge.innerText = 'B2B Brand & Sponsorship';
+        modalTitle.innerText = 'Advertise or Partner on SmartWorkWala';
+        modalNotes.value = 'Interested in: High-intent ad placement / sponsorship / course listing.';
+        document.getElementById('modal-category').value = 'partner';
+      } else {
+        modalBadge.innerText = 'Smart Solution Match';
+        modalTitle.innerText = 'Connect with Verified Solutions';
+        modalNotes.value = '';
+        document.getElementById('modal-category').value = 'skill';
+      }
+    }
+
+    function openModalWithDetails(detail) {
+      modalSuccess.classList.add('hidden');
+      actionModal.classList.remove('hidden');
+      modalBadge.innerText = 'Direct Solution Bridge';
+      modalTitle.innerText = 'Get Immediate Access / Connect';
+      modalNotes.value = 'Interested in: ' + detail;
+    }
+
+    function closeModal() {
+      actionModal.classList.add('hidden');
+      modalSuccess.classList.add('hidden');
+    }
+
+    function handleModalSubmit(e) {
+      e.preventDefault();
+      modalSuccess.classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function handleNewsletter(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletter-email').value;
+      alert(`🎉 Shukriya! ${email} has been subscribed to SmartWorkWala weekly opportunity drops.`);
+      document.getElementById('newsletter-form').reset();
+    }
+
+    // Initial render
+    generateMatchResults();
+  </script>
+</body>
+</html>
