@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SmartWorkWala (smartworkwala.com) - Smart Solutions & Opportunity Aggregator</title>
-  <meta name="description" content="SmartWorkWala bridges the gap between your goals and verified experts, skills, digital tools & growth opportunities in one unified ecosystem.">
+  <title>SmartWorkWala (smartworkwala.com) — Powered by MultiWorkWala</title>
+  <meta name="description" content="SmartWorkWala, proudly powered by MultiWorkWala, bridges the gap between your goals and verified experts, skills, digital tools & growth opportunities.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo.png">
@@ -12,7 +12,7 @@
   <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -88,7 +88,6 @@
       background-image: radial-gradient(rgba(13, 110, 253, 0.12) 1px, transparent 1px);
       background-size: 24px 24px;
     }
-    /* Animated Gradient Border */
     .gradient-border-wrapper {
       position: relative;
       border-radius: 1rem;
@@ -99,7 +98,6 @@
       background: #ffffff;
       border-radius: calc(1rem - 1.5px);
     }
-    /* Smooth Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -117,12 +115,13 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden">
 
-  <!-- TOP ANNOUNCEMENT BAR (Monetization / Sponsorship / High-Intent Hook) -->
+  <!-- TOP ANNOUNCEMENT BAR (Powered By MultiWorkWala Highlighted) -->
   <div class="bg-gradient-to-r from-brand-navyDark via-brand-navy to-brand-navyDark text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-2 mx-auto sm:mx-0">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-brand-orange text-white uppercase tracking-wider">
-          New
+        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-[11px] font-black bg-gradient-to-r from-brand-orange to-amber-500 text-white uppercase tracking-wider shadow-sm">
+          <span>⚡ POWERED BY</span>
+          <span class="underline">MULTIWORKWALA</span>
         </span>
         <span class="font-medium text-slate-200">
           🚀 India's Smartest Solution & Opportunity Aggregator is live!
@@ -142,25 +141,30 @@
     </div>
   </div>
 
-  <!-- NAVIGATION BAR -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+  <!-- NAVIGATION BAR (Prominently displaying Logo & Powered by MultiWorkWala) -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Brand Logo -->
+        <!-- Brand Logo & Powered By MultiWorkWala Lockup -->
         <a href="#" class="flex items-center gap-3 group">
           <div class="relative flex items-center">
             <img src="assets/logo.png" alt="SmartWorkWala Logo" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
           </div>
-          <div class="hidden lg:block border-l border-slate-200 pl-3">
-            <span class="block text-xs uppercase tracking-widest font-extrabold text-brand-navy">Aggregator Hub</span>
-            <span class="block text-[11px] text-slate-500">Bridge to Growth</span>
+          <div class="border-l border-slate-200 pl-3 flex flex-col justify-center">
+            <div class="flex items-center gap-1.5">
+              <span class="text-[10px] font-black tracking-wider uppercase text-slate-500">Powered by</span>
+              <span class="text-xs font-black text-brand-orange bg-orange-50 px-2 py-0.5 rounded-md border border-orange-200 shadow-2xs">
+                MultiWorkWala
+              </span>
+            </div>
+            <span class="block text-[11px] font-bold text-brand-navy mt-0.5">Aggregator & Intermediate Bridge</span>
           </div>
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
-          <a href="#verticals" class="hover:text-brand-blue transition-colors flex items-center gap-1">
+        <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-700">
+          <a href="#verticals" class="hover:text-brand-blue transition-colors">
             Solutions Hub
           </a>
           <a href="#how-it-works" class="hover:text-brand-blue transition-colors">
@@ -200,6 +204,10 @@
 
     <!-- Mobile Dropdown Navigation -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3">
+      <div class="py-2 px-3 rounded-lg bg-orange-50 border border-orange-200 text-xs font-bold text-brand-orange flex items-center justify-between">
+        <span>A Flagship Initiative</span>
+        <span class="font-black">Powered by MultiWorkWala</span>
+      </div>
       <a href="#verticals" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-blue">Solutions Hub</a>
       <a href="#how-it-works" class="block py-2 text-base font-semibold text-slate-700 hover:text-brand-blue">How It Works</a>
       <a href="#match-engine" class="block py-2 text-base font-semibold text-brand-blue flex items-center justify-between">
@@ -233,10 +241,10 @@
         <!-- Left Hero Content -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           
-          <!-- Badge -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/80 border border-blue-200 text-brand-navy text-xs sm:text-sm font-semibold shadow-sm">
+          <!-- Badge with Powered by MultiWorkWala -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/90 border border-blue-200 text-brand-navy text-xs sm:text-sm font-semibold shadow-sm">
             <span class="flex h-2 w-2 rounded-full bg-brand-orange animate-ping"></span>
-            <span>Digital Intermediate Bridge & Curated Aggregator</span>
+            <span>Powered by <strong class="text-brand-orange">MultiWorkWala</strong> • Curated Intermediate Bridge</span>
           </div>
 
           <!-- Main Catchy Title -->
@@ -248,7 +256,7 @@
 
           <!-- Value Proposition Description -->
           <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-            Bhatakna band karo! <strong class="text-brand-navy font-semibold">SmartWorkWala</strong> acts as your intelligent bridge — aggregating verified skill guidance, social media reach boosters, high-ROI freelance services, and curated digital tools matched to your exact requirement.
+            Bhatakna band karo! <strong class="text-brand-navy font-semibold">SmartWorkWala</strong> (proudly powered by <strong class="text-brand-orange font-bold">MultiWorkWala</strong>) acts as your intelligent bridge — aggregating verified skill guidance, social media reach boosters, high-ROI freelance services, and curated digital tools matched to your exact requirement.
           </p>
 
           <!-- LIVE SEARCH BAR / AGGREGATOR ENGINE SEARCH -->
@@ -333,7 +341,7 @@
                   </div>
                   <div>
                     <h3 class="font-extrabold text-brand-navy text-sm font-display">The SWW Smart Bridge</h3>
-                    <p class="text-[11px] text-slate-500 font-medium">Intelligent Aggregation Flow</p>
+                    <p class="text-[11px] text-brand-orange font-bold">Powered by MultiWorkWala Core</p>
                   </div>
                 </div>
                 <span class="px-2.5 py-1 text-[11px] font-bold rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center gap-1">
@@ -360,7 +368,7 @@
                 <div class="w-0.5 h-6 bg-gradient-to-b from-brand-blue via-brand-orange to-brand-amber"></div>
                 <div class="absolute bg-white px-2 py-0.5 rounded-full border border-slate-200 shadow-xs text-[10px] font-bold text-slate-600 flex items-center gap-1">
                   <i data-lucide="zap" class="w-3 h-3 text-brand-orange animate-bounce"></i>
-                  <span>SWW Aggregator Engine (Filters 99% Noise)</span>
+                  <span>MultiWorkWala Vetting Engine (Filters 99% Noise)</span>
                 </div>
               </div>
 
@@ -439,7 +447,7 @@
     </div>
   </section>
 
-  <!-- STATS & ECOSYSTEM METRICS (Trust builder for both users and advertisers) -->
+  <!-- STATS & ECOSYSTEM METRICS -->
   <section class="bg-brand-navy py-12 text-white relative overflow-hidden">
     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -454,7 +462,7 @@
         <div class="space-y-1">
           <div class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-amber font-display">1,200+</div>
           <div class="text-xs sm:text-sm font-semibold text-slate-300">Verified Providers & Roadmaps</div>
-          <p class="text-[11px] text-slate-400">Strict 4-stage quality audit</p>
+          <p class="text-[11px] text-slate-400">MultiWorkWala quality audit</p>
         </div>
 
         <div class="space-y-1">
@@ -477,6 +485,34 @@
   <section id="verticals" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
+      <!-- MultiWorkWala Core Infrastructure Banner -->
+      <div class="mb-14 bg-gradient-to-r from-brand-navy via-slate-900 to-brand-navyDark rounded-3xl p-6 sm:p-8 text-white border border-brand-orange/30 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-orange to-amber-500 text-white flex items-center justify-center font-black text-2xl shadow-glow-orange shrink-0">
+            ⚡
+          </div>
+          <div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-brand-amber text-[11px] font-bold uppercase tracking-wider">
+              Official Ecosystem
+            </div>
+            <h3 class="text-xl font-bold font-display mt-1 text-white">
+              SmartWorkWala is Powered by <span class="gradient-text-orange font-extrabold">MultiWorkWala</span>
+            </h3>
+            <p class="text-xs text-slate-300 mt-1 max-w-2xl">
+              MultiWorkWala's trusted infrastructure powers the curation, partner background verification, and quality audit engines behind SmartWorkWala, guaranteeing zero spam and high-ROI matches.
+            </p>
+          </div>
+        </div>
+        <div class="shrink-0 flex items-center gap-3">
+          <span class="px-3.5 py-2 rounded-xl bg-white/10 text-brand-amber font-bold text-xs border border-white/20">
+            ✓ MultiWorkWala Certified
+          </span>
+          <button onclick="scrollToMatchEngine()" class="px-5 py-2.5 rounded-xl bg-brand-orange hover:bg-amber-600 text-white font-bold text-xs shadow-md transition-all">
+            Find Matches &rarr;
+          </button>
+        </div>
+      </div>
+
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
         <span class="text-xs font-extrabold uppercase tracking-widest text-brand-blue bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
@@ -648,7 +684,7 @@
           Find Your Exact Solution in 3 Clicks
         </h2>
         <p class="text-slate-600 text-sm max-w-xl mx-auto">
-          Apna role aur goal select kijiye — humara aggregator algorithm aapko direct verified solutions aur growth roadmaps recommend karega.
+          Apna role aur goal select kijiye — MultiWorkWala algorithm aapko direct verified solutions aur growth roadmaps recommend karega.
         </p>
       </div>
 
@@ -720,7 +756,7 @@
               <span>SmartWorkWala Recommended Solutions:</span>
             </h4>
             <span class="text-xs text-brand-green font-bold bg-green-50 px-2.5 py-1 rounded-full border border-green-200">
-              Verified Aggregator Output
+              Verified by MultiWorkWala
             </span>
           </div>
 
@@ -746,7 +782,7 @@
           How SmartWorkWala Bridges the Gap
         </h2>
         <p class="text-slate-600 text-sm sm:text-base">
-          Internet par lakho options hain, par kaunsa trustworthy hai? Humara 3-step system aapko direct reliable result tak pahunchata hai.
+          MultiWorkWala ecosystem par har solution strictly verified hota hai taaki aapka time aur paisa dono safe rahein.
         </p>
       </div>
 
@@ -774,7 +810,7 @@
           <div class="w-14 h-14 mx-auto rounded-2xl bg-brand-orange text-white flex items-center justify-center font-display font-extrabold text-xl shadow-glow-orange">
             02
           </div>
-          <h3 class="text-lg font-bold text-brand-navy">Intelligent Aggregation</h3>
+          <h3 class="text-lg font-bold text-brand-navy">MultiWorkWala Audit</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
             SmartWorkWala filters out 99% of scam courses, overpriced agencies, and junk tools. Aapko milta hai sirf curated top 1% verified options.
           </p>
@@ -826,7 +862,7 @@
       <!-- High-CTR Native Banner / Sponsored Placement Mockup -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
-        <!-- Sponsored Card 1 (High engagement native ad placement) -->
+        <!-- Sponsored Card 1 -->
         <div class="gradient-border-wrapper">
           <div class="gradient-border-content p-6 flex flex-col justify-between h-full">
             <div class="space-y-3">
@@ -945,7 +981,7 @@
               <th class="p-4 sm:p-5 bg-blue-50/80 text-brand-blue border-l border-r border-blue-200 font-extrabold">
                 <div class="flex items-center gap-1.5">
                   <span class="text-base">🚀</span>
-                  <span>SmartWorkWala Bridge</span>
+                  <span>SmartWorkWala (MultiWorkWala)</span>
                 </div>
               </th>
             </tr>
@@ -986,7 +1022,7 @@
     </div>
   </section>
 
-  <!-- FOR PARTNERS & ADVERTISERS SECTION (Revenue Generation Focus) -->
+  <!-- FOR PARTNERS & ADVERTISERS SECTION -->
   <section id="for-sponsors" class="py-20 bg-gradient-to-br from-brand-navyDark via-brand-navy to-slate-900 text-white relative overflow-hidden">
     
     <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -997,7 +1033,7 @@
         
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-brand-amber text-xs font-bold uppercase tracking-wider">
-            <span>B2B Growth & Monetization</span>
+            <span>B2B Growth & MultiWorkWala Synergy</span>
           </div>
 
           <h2 class="text-3xl sm:text-4xl font-extrabold font-display leading-tight">
@@ -1069,7 +1105,7 @@
             </div>
 
             <div class="text-[11px] text-slate-400 text-center pt-2">
-              Fast onboarding • Custom tracking links • Transparent analytics
+              MultiWorkWala Infrastructure • Custom tracking links • Transparent analytics
             </div>
           </div>
         </div>
@@ -1196,17 +1232,48 @@
         </form>
 
         <p class="text-[11px] text-blue-200/80">
-          🔒 Aapka data 100% secure hai. Unsubscribe anytime with 1 click.
+          🔒 Aapka data 100% secure hai. Powered by MultiWorkWala Privacy Infrastructure.
         </p>
 
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER: HIGH-VISIBILITY POWERED BY MULTIWORKWALA & FULL COPYRIGHT CLAIMS -->
   <footer class="bg-brand-navyDark text-slate-300 pt-16 pb-12 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
+      <!-- HIGHLIGHTED POWERED BY MULTIWORKWALA STRIP -->
+      <div class="bg-gradient-to-r from-brand-navy via-slate-900 to-brand-navyDark p-6 sm:p-8 rounded-3xl border border-brand-orange/40 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-brand-orange via-amber-500 to-brand-blue text-white flex items-center justify-center font-black text-2xl shadow-glow-orange shrink-0">
+            MW
+          </div>
+          <div>
+            <div class="flex items-center justify-center md:justify-start gap-2">
+              <span class="text-xs font-black uppercase tracking-wider text-brand-amber">Official Ecosystem Partner</span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-brand-orange text-white uppercase tracking-wide">Verified</span>
+            </div>
+            <h3 class="text-xl font-extrabold text-white mt-1 font-display">
+              SmartWorkWala is Proudly Powered by <span class="gradient-text-orange font-black">MultiWorkWala</span>
+            </h3>
+            <p class="text-xs text-slate-300 max-w-2xl mt-1 leading-relaxed">
+              Backed by MultiWorkWala's trusted digital network — powering verified service matching, skill guidance architectures, creator toolkits, and modern enterprise aggregator solutions.
+            </p>
+          </div>
+        </div>
+        <div class="shrink-0 flex flex-col sm:flex-row items-center gap-3">
+          <button onclick="openLegalModal()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs border border-white/20 transition-all flex items-center gap-1.5">
+            <i data-lucide="shield" class="w-3.5 h-3.5 text-brand-amber"></i>
+            <span>IP & Copyright Claim</span>
+          </button>
+          <a href="#match-engine" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-orange to-amber-500 hover:from-amber-500 hover:to-brand-orange text-white font-black text-xs shadow-glow-orange transition-all">
+            Join MultiWorkWala Network
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Columns -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
         
         <!-- Brand Info -->
@@ -1215,7 +1282,7 @@
             <img src="assets/logo.png" alt="SmartWorkWala" class="h-12 w-auto object-contain filter brightness-0 invert">
           </a>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
-            SmartWorkWala (<a href="https://smartworkwala.com" class="text-brand-blueLight hover:underline font-semibold">smartworkwala.com</a>) is India's leading digital aggregator and intermediate bridge, empowering individuals and businesses with verified guidance, digital tools, and opportunity matching.
+            SmartWorkWala (<a href="https://smartworkwala.com" class="text-brand-blueLight hover:underline font-semibold">smartworkwala.com</a>) is an intelligent digital aggregator and intermediate bridge powered by <strong>MultiWorkWala</strong>, connecting seekers with verified guidance, services, and growth opportunities.
           </p>
           <div class="flex items-center gap-3 pt-2">
             <a href="#" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-blue hover:text-white flex items-center justify-center transition-colors text-slate-400">
@@ -1261,29 +1328,49 @@
         <div class="space-y-3">
           <h4 class="text-xs font-extrabold uppercase tracking-wider text-white">Trust & Legal</h4>
           <ul class="space-y-2 text-xs text-slate-400">
-            <li><a href="#" class="hover:text-white transition-colors">About SmartWorkWala</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Verification Criteria</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><button onclick="openLegalModal()" class="hover:text-brand-amber text-left">Copyright & IP Notice</button></li>
+            <li><button onclick="openLegalModal()" class="hover:text-white text-left">MultiWorkWala Backing</button></li>
+            <li><button onclick="openLegalModal()" class="hover:text-white text-left">Terms of Service</button></li>
+            <li><button onclick="openLegalModal()" class="hover:text-white text-left">Privacy Policy</button></li>
             <li><a href="#" class="hover:text-white transition-colors">Contact Support</a></li>
           </ul>
         </div>
 
       </div>
 
-      <!-- Bottom Bar -->
-      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-        <div>
-          &copy; 2026 SmartWorkWala (smartworkwala.com). All rights reserved. Built with ❤️ for Bharat's smart workers.
+      <!-- LEGAL COPYRIGHT CLAIM & STATUTORY NOTICE -->
+      <div class="pt-8 border-t border-white/10 space-y-4">
+        
+        <div class="bg-black/40 border border-white/10 p-5 rounded-2xl text-[11px] text-slate-400 space-y-2">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+            <span class="font-extrabold text-white text-xs flex items-center gap-1.5">
+              <i data-lucide="shield-alert" class="w-4 h-4 text-brand-amber"></i>
+              <span>OFFICIAL COPYRIGHT CLAIM & INTELLECTUAL PROPERTY DECLARATION</span>
+            </span>
+            <span class="text-brand-amber font-mono text-[10px]">REGISTRATION & TRADEMARK NOTICE</span>
+          </div>
+          <p class="leading-relaxed">
+            &copy; <strong>2026 SmartWorkWala (smartworkwala.com)</strong>. All Rights Reserved. SmartWorkWala is proudly powered by <strong>MultiWorkWala</strong>. All platform trademarks, logomarks, monograms (including the S+W connected node mark), domain identities, site designs, curated aggregations, and intellectual property are the exclusive proprietary property of <strong>MultiWorkWala</strong> and its affiliated operating entities.
+          </p>
+          <p class="leading-relaxed text-slate-500">
+            Unauthorized copying, scraping, reverse engineering, republishing, distribution, or commercial exploitation of any material without express written consent from MultiWorkWala is strictly prohibited and protected under the <em>Indian Copyright Act, 1957</em>, the <em>Trade Marks Act, 1999</em>, and international copyright conventions. For copyright clearances, DMCA notices, or brand attribution licensing, contact <span class="text-slate-300 font-mono">legal@smartworkwala.com</span>.
+          </p>
         </div>
-        <div class="flex items-center gap-4">
-          <span class="flex items-center gap-1.5 text-slate-400">
-            <span class="w-2 h-2 rounded-full bg-brand-green"></span>
-            <span>All Systems Operational</span>
-          </span>
-          <span>•</span>
-          <span class="text-slate-400">Aggregator & Intermediate Bridge Platform</span>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4 pt-2">
+          <div>
+            &copy; 2026 SmartWorkWala (smartworkwala.com) & MultiWorkWala. Built with ❤️ for Bharat's smart workers.
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="flex items-center gap-1.5 text-slate-400">
+              <span class="w-2 h-2 rounded-full bg-brand-green"></span>
+              <span>All Systems Operational</span>
+            </span>
+            <span>•</span>
+            <span class="text-brand-orange font-bold">Powered by MultiWorkWala</span>
+          </div>
         </div>
+
       </div>
 
     </div>
@@ -1308,7 +1395,7 @@
           Connect to Your Curated Solution
         </h3>
         <p id="modal-desc" class="text-xs text-slate-600">
-          Apni requirement bataiye — humari team aapko best verified options se connect karegi.
+          Apni requirement bataiye — MultiWorkWala quality team aapko best verified options se connect karegi.
         </p>
       </div>
 
@@ -1331,7 +1418,7 @@
             <option value="social">📈 Social Media Reach / Viral Growth</option>
             <option value="service">💼 Verified Freelancer / Service Match</option>
             <option value="tools">⚡ AI Tools & SaaS Discount Deals</option>
-            <option value="partner">🤝 Advertise / Partner with SmartWorkWala</option>
+            <option value="partner">🤝 Advertise / Partner with SmartWorkWala (MultiWorkWala)</option>
           </select>
         </div>
 
@@ -1346,7 +1433,7 @@
         </button>
 
         <p class="text-[10px] text-center text-slate-500">
-          We respect your privacy. No spam calls. 100% verified bridge.
+          We respect your privacy. Powered by MultiWorkWala Trust & Security.
         </p>
       </form>
 
@@ -1357,10 +1444,77 @@
         </div>
         <h4 class="text-xl font-bold text-brand-navy">Requirement Received!</h4>
         <p class="text-xs text-slate-600 max-w-xs">
-          Shukriya! SmartWorkWala team aapke requirement ke according top verified solutions WhatsApp/Email par share karegi.
+          Shukriya! SmartWorkWala (Powered by MultiWorkWala) team aapke requirement ke according top verified solutions WhatsApp/Email par share karegi.
         </p>
         <button onclick="closeModal()" class="bg-brand-navy text-white text-xs font-bold px-6 py-2.5 rounded-xl">
           Back to Hub
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LEGAL & COPYRIGHT CLAIM MODAL -->
+  <div id="legal-modal" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100 max-h-[85vh] overflow-y-auto space-y-5 text-xs text-slate-700">
+      
+      <button onclick="closeLegalModal()" class="absolute top-5 right-5 p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="border-b border-slate-200 pb-4">
+        <div class="flex items-center gap-2 text-brand-orange font-bold text-xs uppercase tracking-wider mb-1">
+          <i data-lucide="scale" class="w-4 h-4"></i>
+          <span>Official Legal Statement</span>
+        </div>
+        <h3 class="text-xl font-extrabold text-brand-navy font-display">
+          Copyright, Trademark & Intellectual Property Claim
+        </h3>
+        <p class="text-[11px] text-slate-500 mt-0.5">
+          SmartWorkWala (smartworkwala.com) — Powered by MultiWorkWala
+        </p>
+      </div>
+
+      <div class="space-y-4 leading-relaxed">
+        <div>
+          <h4 class="font-extrabold text-sm text-slate-900 mb-1">1. Ownership & Brand Association</h4>
+          <p>
+            <strong>SmartWorkWala</strong> (domain: <a href="https://smartworkwala.com" class="text-brand-blue font-semibold hover:underline">smartworkwala.com</a>) operates as a dedicated aggregator and intermediate bridge platform proudly <strong>powered by MultiWorkWala</strong>. All operations, verification systems, partner networks, and technological foundations are governed under the MultiWorkWala brand umbrella.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-sm text-slate-900 mb-1">2. Statutory Copyright Claim</h4>
+          <p>
+            All content published on this website, including but not limited to the brand logo, the stylized "S+W" interconnected node monogram, textual materials, graphics, icons, custom illustrations, curated database layouts, UI design systems, codebases, and audio-visual assets are the exclusive intellectual property of <strong>MultiWorkWala</strong> and protected by the <strong>Indian Copyright Act, 1957</strong> and international copyright treaties.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-sm text-slate-900 mb-1">3. Trademark Notice</h4>
+          <p>
+            "SmartWorkWala", "MultiWorkWala", the SmartWorkWala emblem, the forward-growth arrow swoosh, and associated taglines are proprietary trademarks. Unauthorized use, imitation, framing, scraping, or passing off is actionable under the Trade Marks Act, 1999.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-sm text-slate-900 mb-1">4. Aggregator Role & Intermediate Bridge Disclaimer</h4>
+          <p>
+            SmartWorkWala acts strictly as an aggregator and intermediate facilitator connecting users with third-party service providers, mentors, educational platforms, and digital tool providers. While rigorous background audits are conducted under the MultiWorkWala standard, individual transactions with third parties remain subject to their respective terms.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-sm text-slate-900 mb-1">5. DMCA & IP Enforcement Contact</h4>
+          <p>
+            If you have questions regarding licensing, copyright attribution, or wish to submit an infringement notice, please contact our legal desk at <span class="font-mono text-brand-navy font-bold">legal@smartworkwala.com</span> with CC to <span class="font-mono text-brand-navy font-bold">contact@multiworkwala.com</span>.
+          </p>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-200 flex justify-end">
+        <button onclick="closeLegalModal()" class="px-6 py-2.5 bg-brand-navy hover:bg-brand-blue text-white rounded-xl font-bold text-xs transition-colors">
+          I Understand & Acknowledge
         </button>
       </div>
 
@@ -1395,7 +1549,7 @@
         'Skill & Career Growth': [
           {
             title: 'Full Stack & AI Dev Roadmap (2026 Edition)',
-            provider: 'Curated Open Source + Mentored Sprint',
+            provider: 'Curated Open Source • Powered by MultiWorkWala',
             rating: '4.9★ (12k learners)',
             tag: 'Top Pick',
             cta: 'Access Free Roadmap',
@@ -1403,7 +1557,7 @@
           },
           {
             title: 'Remote Internship Bridge Program',
-            provider: 'Verified Partner Network',
+            provider: 'MultiWorkWala Partner Network',
             rating: '4.8★ (450+ placed)',
             tag: 'Direct Placement',
             cta: 'Apply for Match',
@@ -1413,7 +1567,7 @@
         'Social Reach & Followers': [
           {
             title: 'Student Creator Micro-Influencer Blueprint',
-            provider: 'SWW Growth Labs',
+            provider: 'MultiWorkWala Growth Labs',
             rating: '4.8★ (3,400+ students)',
             tag: 'Zero to 10k',
             cta: 'Get Toolkit',
@@ -1421,7 +1575,7 @@
           },
           {
             title: 'Canva & CapCut Content Creator Pack',
-            provider: 'Creator Hub India',
+            provider: 'Creator Hub India • MultiWorkWala',
             rating: '4.9★ (8k downloads)',
             tag: 'Free Templates',
             cta: 'Download Pack',
@@ -1451,7 +1605,7 @@
         'Social Reach & Followers': [
           {
             title: 'Shorts & Reels Virality Framework 4.0',
-            provider: 'Top 1% Creator Circle',
+            provider: 'Top 1% Creator Circle • MultiWorkWala',
             rating: '4.9★ (15k creators)',
             tag: 'High Virality',
             cta: 'Unlock Strategy',
@@ -1477,7 +1631,7 @@
           },
           {
             title: 'Creator Economy Business Blueprint',
-            provider: 'SWW Growth Bridge',
+            provider: 'SWW Growth Bridge • MultiWorkWala',
             rating: '4.8★ (950 reviews)',
             tag: 'Scaling',
             cta: 'Read Guide',
@@ -1487,7 +1641,7 @@
         'Hire Verified Talent / Services': [
           {
             title: 'Dedicated Short-Form Video Editors',
-            provider: 'Vetted Editor Guild',
+            provider: 'Vetted Editor Guild • MultiWorkWala',
             rating: '4.9★ (420+ creators matched)',
             tag: 'Top 1% Tested',
             cta: 'Hire Tested Editor',
@@ -1507,7 +1661,7 @@
         'Hire Verified Talent / Services': [
           {
             title: 'White-Label Subcontractor Network',
-            provider: 'SWW Agency Bridge',
+            provider: 'MultiWorkWala Agency Bridge',
             rating: '4.9★ (250+ agencies)',
             tag: 'On-Demand Scale',
             cta: 'Bridge Subcontractors',
@@ -1533,7 +1687,7 @@
           },
           {
             title: 'AI Automation Workflow Consultant Roadmap',
-            provider: 'NextGen AI Guild',
+            provider: 'NextGen AI Guild • MultiWorkWala',
             rating: '4.9★ (1,500+ pros)',
             tag: 'High Hourly Rate',
             cta: 'Learn AI Consulting',
@@ -1563,7 +1717,7 @@
         'Hire Verified Talent / Services': [
           {
             title: 'Dedicated Full-Stack Developer on Demand',
-            provider: 'SWW Vetted Dev Network',
+            provider: 'MultiWorkWala Vetted Devs',
             rating: '4.9★ (650+ startups)',
             tag: 'Verified Top 3%',
             cta: 'Request Dev Profile',
@@ -1581,7 +1735,7 @@
         'Skill & Career Growth': [
           {
             title: 'AI Business Automation Playbook',
-            provider: 'SWW Tech Bridge',
+            provider: 'SWW Tech Bridge • MultiWorkWala',
             rating: '4.9★ (1,200+ founders)',
             tag: 'Save 20 hrs/wk',
             cta: 'Get Playbook',
@@ -1607,7 +1761,7 @@
           },
           {
             title: 'Influencer Collaboration Engine',
-            provider: 'SWW Influencer Aggregator',
+            provider: 'MultiWorkWala Influencer Aggregator',
             rating: '4.8★ (150+ campaigns)',
             tag: 'Guaranteed ROI',
             cta: 'Launch Campaign',
@@ -1658,7 +1812,7 @@
               </span>
             </div>
             <h5 class="font-bold text-sm text-brand-navy leading-snug">${res.title}</h5>
-            <p class="text-[11px] text-slate-500">${res.provider}</p>
+            <p class="text-[11px] text-slate-500 font-semibold">${res.provider}</p>
             <p class="text-xs text-slate-600 leading-relaxed">${res.desc}</p>
           </div>
           <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
@@ -1740,7 +1894,7 @@
       if (type === 'advertise') {
         modalBadge.innerText = 'B2B Brand & Sponsorship';
         modalTitle.innerText = 'Advertise or Partner on SmartWorkWala';
-        modalNotes.value = 'Interested in: High-intent ad placement / sponsorship / course listing.';
+        modalNotes.value = 'Interested in: High-intent ad placement / sponsorship / course listing (MultiWorkWala Ecosystem).';
         document.getElementById('modal-category').value = 'partner';
       } else {
         modalBadge.innerText = 'Smart Solution Match';
@@ -1774,6 +1928,15 @@
       const email = document.getElementById('newsletter-email').value;
       alert(`🎉 Shukriya! ${email} has been subscribed to SmartWorkWala weekly opportunity drops.`);
       document.getElementById('newsletter-form').reset();
+    }
+
+    // Legal Modal
+    const legalModal = document.getElementById('legal-modal');
+    function openLegalModal() {
+      legalModal.classList.remove('hidden');
+    }
+    function closeLegalModal() {
+      legalModal.classList.add('hidden');
     }
 
     // Initial render
